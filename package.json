@@ -1,0 +1,27 @@
+{
+  "name": "commutez-graphql",
+  "version": "1.0.0",
+  "description": "GraphQL server used to connect to open train traffic APIs in SE and DK",
+  "main": "index.js",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "apollo-datasource-rest": "^0.6.4",
+    "apollo-server": "^2.9.4",
+    "graphql": "^14.5.8"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.6.2",
+    "@babel/core": "^7.6.2",
+    "@babel/node": "^7.6.2",
+    "@babel/plugin-transform-spread": "^7.6.2",
+    "@babel/preset-env": "^7.6.2",
+    "dotenv": "^8.1.0"
+  },
+  "scripts": {
+    "start": "node .src/index.js",
+    "server": "babel-node ./src/index.js",
+    "dev": "NODE_ENV=development npm run server"
+  }
+}
