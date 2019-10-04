@@ -13,7 +13,7 @@ const resolvers = {
       return new Date(value); // value from the client
     },
     serialize(value) {
-      return value && new Date(value).toISOString();
+      return value && new Date(Date.parse(value));
     },
     parseLiteral(ast) {
       if (ast.kind === Kind.INT) {
