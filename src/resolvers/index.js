@@ -4,6 +4,9 @@ const resolvers = {
   Query: {
     trainsFromMalmo: async (_source, _args, { dataSources }) => {
       return dataSources.swedishTrainAPI.getSwedishTrains();
+    },
+    trainsFromCopenhagen: async (_source, _argsm, { dataSources }) => {
+      return dataSources.danishTrainAPI.getDanishTrains();
     }
   },
   Date: new GraphQLScalarType({
