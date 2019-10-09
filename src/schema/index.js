@@ -25,7 +25,7 @@ const schemas = gql`
 
   type Query {
     trainsFromMalmo: [TrainDepartureSE]
-    trainsFromCopenhagen: [TrainDepartureDK]
+    trainsFromCopenhagen(stationId: String): [TrainDepartureDK]
   }
 `;
 
