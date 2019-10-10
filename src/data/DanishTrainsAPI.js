@@ -11,7 +11,7 @@ const knownSwedishDestinations = [
   "Kalmar C"
 ];
 
-export default class DanishTrainAPI extends RESTDataSource {
+export default class DanishTrainsAPI extends RESTDataSource {
   constructor() {
     super();
     this.baseURL = process.env.BASE_URL_DK;

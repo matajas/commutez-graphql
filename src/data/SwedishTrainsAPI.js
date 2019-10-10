@@ -1,6 +1,6 @@
 import { RESTDataSource } from "apollo-datasource-rest";
 
-export default class SwedishTrainAPI extends RESTDataSource {
+export default class SwedishTrainsAPI extends RESTDataSource {
   constructor() {
     super();
     this.baseURL = process.env.BASE_URL_SE;
