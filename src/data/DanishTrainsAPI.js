@@ -8,7 +8,9 @@ const knownSwedishDestinations = [
   "Helsingborg C",
   "Växjö C",
   "Göteborg C",
-  "Kalmar C"
+  "Kalmar C",
+  "Halmstad C",
+  "Landskrona C"
 ];
 
 export default class DanishTrainsAPI extends RESTDataSource {
