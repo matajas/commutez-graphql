@@ -2,8 +2,8 @@ import { GraphQLScalarType } from "graphql";
 
 const resolvers = {
   Query: {
-    trainsFromMalmo: async (_source, _args, { dataSources }) => {
-      return dataSources.swedishTrainsAPI.getSwedishTrains();
+    trainsFromMalmo: async (_source, { stationId }, { dataSources }) => {
+      return dataSources.swedishTrainsAPI.getSwedishTrains(stationId);
     },
     trainsFromCopenhagen: async (_source, { stationId }, { dataSources }) => {
       return dataSources.danishTrainsAPI.getDanishTrains(stationId);

@@ -6,7 +6,7 @@ export default class SwedishTrainsAPI extends RESTDataSource {
     this.baseURL = process.env.BASE_URL_SE;
   }
 
-  async getSwedishTrains() {
+  async getSwedishTrains(stationId = "M") {
     const body = `
     <REQUEST>
 	    <LOGIN authenticationkey="${process.env.AUTHKEY_SE}" />
@@ -14,7 +14,7 @@ export default class SwedishTrainsAPI extends RESTDataSource {
             <FILTER>
                 <AND>
                     <EQ name="ActivityType" value="Avgang" />
-                    <EQ name="LocationSignature" value="M" />
+                    <EQ name="LocationSignature" value="${stationId}" />
                     <EQ name="ToLocation.LocationName" value="Dk.Kh" />
                     <EQ name="InformationOwner" value="Öresundståg" />
                     <EXISTS name="TimeAtLocation" value="false" />
