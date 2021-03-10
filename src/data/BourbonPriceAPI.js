@@ -7,8 +7,12 @@ export default class BourbonPriceAPI extends RESTDataSource {
     }
 
     async getBourbonPrice() {
-        const bourbonPriceResult = await this.get(this.bourbonURL);
-        const salesPrice = bourbonPriceResult && bourbonPriceResult.doc ? bourbonPriceResult.doc.display_sales_price : "N/A";
-        return salesPrice;
+        try {
+            const bourbonPriceResult = await this.get(this.bourbonURL);
+            const salesPrice = bourbonPriceResult && bourbonPriceResult.doc ? bourbonPriceResult.doc.display_sales_price : "N/A";
+            return salesPrice;
+        } catch {
+            return "Error";
+        }
     }
 }
