@@ -17,6 +17,7 @@ export default class SwedishTrainsAPI extends RESTDataSource {
                     <EQ name="LocationSignature" value="${stationId}" />
                     <EQ name="ToLocation.LocationName" value="Dk.Kh" />
                     <EQ name="InformationOwner" value="Öresundståg" />
+                    <EQ name="Advertised" value="true" />
                     <EXISTS name="TimeAtLocation" value="false" />
                     <OR>
                         <AND>
@@ -38,6 +39,7 @@ export default class SwedishTrainsAPI extends RESTDataSource {
 		    <INCLUDE>TrackAtLocation</INCLUDE>
 		    <INCLUDE>Deviation</INCLUDE>
 		    <INCLUDE>Canceled</INCLUDE>
+        <INCLUDE>Advertised</INCLUDE>
 	    </QUERY>
     </REQUEST>`;
 
